@@ -1,0 +1,82 @@
+.forms-ctn {
+   display: flex; 
+   justify-content: space-between;
+}
+
+.search-input, .user-input {
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 6px 150px 6px 10px;
+    font-size: 15px;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.post-form, .put-form, .del-form, .xlsx-ctn, .post-client, .put-client {
+    width: 40%;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(226, 226, 226);
+}
+
+.login-form-ctn, .register-form-ctn {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.login-form, .register-form {
+    width: 25%;
+    padding: 30px 50px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(226, 226, 226);
+}
+
+h1, h5 {
+    font-weight: bold;
+}
+
+.model-xlsx {
+    margin-top: 0px;
+}
+
+.post-form label, .put-form label, .del-form label, .xlsx-ctn label, .post-client label, .put-client label, .login-form label, .register-form label {
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-form input, .put-form input, .del-form input, .xlsx-ctn input, .post-client input, .put-client input, .login-form input, .register-form input {
+    margin-bottom: 20px;
+}
+
+.import-xlsx {
+    margin: 0;
+}
+
+.post-form input[type='submit'], .put-form input[type='submit'], .del-form input[type='submit'], .xlsx-ctn input[type='submit'], .post-client input[type='submit'], .put-client input[type='submit']  {
+    max-width: 18%;
+    background-color: rgb(202, 28, 28);
+    color: white;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 15px;
+}
+
+.login-form input[type='submit'], .register-form input[type='submit'] {
+    max-width: 35%;
+    background-color: rgb(202, 28, 28);
+    color: white;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 15px;
+}

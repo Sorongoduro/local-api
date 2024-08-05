@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/metadata') %>
+    <%- include('../partials/style-links') %>
+    <link rel="stylesheet" href="css/cierre.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <% contador.forEach(cont => { %>
+        <p data-total="<%= cont.total %>" class="total-vendidos">
+            <strong>Total Vendido:</strong> <span class="total-vendido">$<%= cont.total %></span> 
+        </p>
+        <p data-cont="<%= cont.contador %>" class="productos-vendidos">
+            <strong>Productos Vendidos:</strong> <span class="producto-vendido"><%= cont.contador %></span> 
+        </p>
+        <p class="promedio-text">
+           <strong>Promedio:</strong>   <span class="promedio-ventas">$0</span>
+        </p>
+        <!-- <a class="promedio-btn bttn" href="">Calcular promedio</a> -->
+    <% }) %>
+
+    <script src="js/cierre.js"></script>
+    <%- include('../partials/bootstrap-script') %>
+</body>
+</html>

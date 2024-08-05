@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/metadata') %>
+    <%- include('../partials/style-links') %>
+    <link rel="stylesheet" href="css/clientes.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <div class="cliente-ctn">
+        <% clientes.forEach(cliente => { %>
+            <div class="cliente">
+                <h2><%= cliente.nombre %> <%= cliente.apellido %></h2>
+                <div class="info-cliente">
+                    <% if(cliente.email !== '') { %>
+                        <p class="email">
+                            <strong>Mail: </strong> <%= cliente.email %>
+                        </p>
+                    <% } %>
+                    <% if(cliente.celular !== '') { %>
+                        <p class="telefono">
+                            <strong>Celular:</strong> <%= cliente.celular %>
+                        </p>
+                    <% } %>
+                    <% if(cliente.fiado !== 0) { %>
+                        <p class="fiado">
+                            <strong>Deuda: </strong> $<%= cliente.fiado %>
+                        </p>
+                    <% } %>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    <%- include('../partials/bootstrap-script') %>
+</body>
+</html>

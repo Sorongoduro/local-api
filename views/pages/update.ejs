@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/metadata') %>
+    <%- include('../partials/style-links') %>
+    <link rel="stylesheet" href="css/forms.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <form class="put-form">
+        <h1>Actualizar Productos</h1>
+        <label>
+            Nombre:
+            <input class="search-input name-input" name="nombre" type="text" placeholder="Nombre del producto">
+        </label>
+        <label>
+            Precio:
+            <input class="search-input" name="venta" type="number" placeholder="Precio del producto">
+        </label>
+        <label>
+            Cantidad:
+            <input class="search-input" name="cantidad" type="number" placeholder="Cantidad del producto">
+        </label>
+        <input class="admin-update" type="submit" value="Enviar">
+    </form>
+    <%- include('../partials/bootstrap-script') %>
+    <script src="js/updateProduct.js"></script>
+</body>
+</html>

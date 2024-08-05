@@ -5,32 +5,47 @@ mongoose.Schema.Types.Number.cast(false)
 mongoose.Schema.Types.String.cast(false)
 
 const schema = new Schema({
-    name: {
+    sku: {
+        type: Number,
+        required: false
+    },
+    codigo_barra: {
+        type: Number,
+        required: false
+    },
+    id: {
+        type: Number,
+        required: false
+    },
+    nombre: {
         type: String,
         required: true
     },
-    price: {
-        type: Number,
-        required: true
-    },
-    quantity: {
-        type: Number,
-        required: true
-    },
-    type: {
+    unidad_medida: {
         type: String,
+        required: false
+    },
+    compra: {
+        type: Number,
+        required: false
+    },
+    venta: {
+        type: Number,
         required: true
+    },
+    cantidad: {
+        type: Number,
+        required: true
+    },
+    cantidad_minima: {
+        type: Number,
+        required: true
+    },
+    categoria: {
+        type: String,
+        required: false
     }
 })
 
 const Product = mongoose.model('productos', schema)
 module.exports = Product
-
-// const product = new Product({
-//         name: "Guitarra",
-//         price: 20
-// }) 
-
-// product.save()
-//     .then(() => {console.log(product)})
-//     .catch((err) => {console.log(err)})

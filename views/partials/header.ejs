@@ -1,0 +1,58 @@
+<header>
+    <div class="hder-ctn">
+        <nav>
+            <div class="nav-ctn">
+                <div class="nav-left">
+                    <ul class="update-tbls">
+                        <li><a href="https://local-api-822e4889e0cf.herokuapp.com/">Venta</a></li>
+                        <% if(userRole === 'admin') { %>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Productos
+                            </a>
+                            <ul class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="https://local-api-822e4889e0cf.herokuapp.com/add">Agregar</a></li>
+                              <li><a class="dropdown-item" href="https://local-api-822e4889e0cf.herokuapp.com/update">Actualizar</a></li>
+                              <li><a class="dropdown-item" href="https://local-api-822e4889e0cf.herokuapp.com/delete">Eliminar</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="https://local-api-822e4889e0cf.herokuapp.com/escaso">Baja Cantidad</a></li>
+                            </ul>
+                        </li>
+                        <% } else if(userRole === 'user') { %>
+                        <li><a href="https://local-api-822e4889e0cf.herokuapp.com/escaso">Alerta Cantidad</a></li>
+                        <% } %>
+                        <% if(userRole === 'admin') { %>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Clientes
+                            </a>
+                            <ul class="dropdown-menu rounded-0  " aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="https://local-api-822e4889e0cf.herokuapp.com/clientes">Cuentas Corrientes</a></li>
+                              <li><a class="dropdown-item" href="https://local-api-822e4889e0cf.herokuapp.com/agregar-cliente">Agregar Cliente</a></li>
+                              <li><a class="dropdown-item" href="https://local-api-822e4889e0cf.herokuapp.com/modificar-cliente">Actualizar Cliente</a></li>
+                              <li><a class="dropdown-item" href="https://local-api-822e4889e0cf.herokuapp.com/eliminar-cliente">Eliminar Cliente</a></li>
+                            </ul>
+                        </li>
+                        <% } else if(userRole === 'user') { %>
+                        <li><a href="https://local-api-822e4889e0cf.herokuapp.com/">Clientes</a></li>
+                        <% } %>
+                        <li><a href="https://local-api-822e4889e0cf.herokuapp.com/">Proveedores</a></li>
+                        <li><a href="https://local-api-822e4889e0cf.herokuapp.com/">Historial</a></li>
+                        <li><a href="https://local-api-822e4889e0cf.herokuapp.com/cierre">Cierre</a></li>
+                    </ul>
+                </div>
+                <div class="nav-center">
+                    <ul class="search-ctn">
+                        <li>
+                            <input class="search-input product-search" type="text" name="" id="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                  <a class="logout" href="https://local-api-822e4889e0cf.herokuapp.com/logout">Cerrar Conexion</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+</header>

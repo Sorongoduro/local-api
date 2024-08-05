@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/metadata') %>
+    <%- include('../partials/style-links') %>
+    <link rel="stylesheet" href="css/forms.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <form class="put-client">
+        <h1>Editar Cliente</h1>
+        <label>
+            Nombre:
+            <input class="search-input" name="nombre" type="text"  placeholder="Nombre del cliente">
+        </label>
+        <label>
+            Apellido:
+            <input class="search-input" name="apellido" type="text" placeholder="Apellido del cliente" >
+        </label>
+        <label>
+            Mail:
+            <input class="search-input" name="email" type="text"  placeholder="nombre@hotmail.com">
+        </label>
+        <label>
+            Celular:
+            <input class="search-input" name="celular" type="text"  placeholder="1123456789">
+        </label>
+        <label>
+            Deuda:
+            <input class="search-input" name="fiado" type="text" placeholder="Deuda del cliente" >
+        </label>
+        
+        <input type="submit" value="Editar">
+    </form>
+
+    <%- include('../partials/bootstrap-script') %>
+</body>
+</html>

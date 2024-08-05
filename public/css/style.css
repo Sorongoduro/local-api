@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+.nav-ctn {
+    display: flex;
+    justify-content:space-between;
+    margin: 20px 0px;
+    align-items: center;
+}
+
+.nav-center {
+    width: 30%;
+
+}
+
+.logout {
+    margin: 0px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.search-ctn {
+    list-style: none;
+    margin: 0;
+}
+
+.update-tbls{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.update-tbls li {
+    margin: 0px 20px;
+}
+
+.update-tbls li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.main-ctn {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+.cards-ctn {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: left;
+    width: 55%;
+    height: 100%;
+    margin: 30px 0px;
+}
+
+.card {
+    background-color: rgb(216, 216, 216);
+}
+
+.card-props {
+    display: grid;
+    grid-template-columns: 55% 30% 30% 100px;
+    max-width: 60%;
+    padding: 5px;
+}
+
+
+.cart-props {
+    display: grid;
+    grid-template-columns: 40% 15% 20% 70px 110px;
+    max-width: 100%;
+    align-items: center;
+    padding: 5px;
+}
+
+.cart-props p {
+    margin: 0;
+}
+
+
+.card-props p {
+    margin: 0;
+}
+
+.card-props p strong {
+    font-size: 18px;
+}
+
+.card-product{
+    opacity: 1;
+    align-items: center;
+    max-width: 60%;
+    padding: 5px;
+
+
+}
+
+.card-info p {
+    margin: 0;
+}
+
+.card-info h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 55% 35% 35% 100px;
+    align-items: center;
+}
+
+.search-input {
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 6px 150px 6px 10px;
+    font-size: 15px;
+    outline: none;
+    font-size: 16px;
+}
+
+
+
+.bttn {
+    text-decoration: none;
+    background-color: rgb(202, 28, 28);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.price-edit-btn, .quantity-edit-btn, .quantity-btn {
+    display: none;
+    margin-left: 3px;
+    padding: 0px 5px;
+}
+
+.balance-btn {
+    margin-left: 3px;
+    padding: 0px 5px;
+}
+
+
+.card img {
+    width: 250px;
+    height: 250px;
+}
+
+form {
+    margin: 20px 0px;
+}
+
+.quantity-ctn, .price-ctn {
+    display: flex;
+    align-items: center;
+
+}
+
+.price-ctn {
+    margin-right: 5px;
+}
+
+.quantity-text, .price-text {
+    font-size: 20px;
+}
+
+.edit-price, .edit-quantity {
+    text-decoration: none;
+}
+
+.active {
+    display: table-column;
+}
+
+.client-ctn {
+    width: 43%;
+    margin-left: 20px;
+}
+
+.cart {
+    max-width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart h2 {
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.cart p {
+    font-size: 20px;
+}   
+
+.product-ctn {
+    display: grid;
+    background-color: rgb(235, 235, 235);
+    grid-template-columns: 40% 15% 15% 70px 110px;
+    align-items: center;
+    padding: 10px;
+}
+
+.product-ctn a {
+    margin-left: 10px;
+}
+
+.product-ctn p {
+    margin: 0;
+}
+
+.price-element, .quantity-element {
+    margin-right: 10px;
+}
+
+.add-btn-ctn {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item:focus {
+    background-color: rgb(202, 28, 28);
+}
+
+.total-ctn {
+    margin-top: 15px;
+}
+
+.total, .change {
+    font-size: 28px;
+    display: inline-block;
+    width: 200px;
+}
+
+.change-input {
+    margin-top: 15px;
+}
+
+.cart-quantity {
+    text-align: center;
+}
+
+.input-addquantity {
+    width: 70px;
+    margin-left: 5px;
+}
+
+.price-lists-ctn {
+    max-width: fit-content;
+    margin-right: 20px;
+}
+
+.client-lists {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.client-info {
+
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    background-color: rgb(245, 245, 245);
+}
+
+.client-item-ctn {
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    width: 93%;
+}
+
+.client-item {
+    text-decoration: none;
+    color: black;
+    display: none;
+}
+
+.client-search-ctn {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.client-item:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.show {
+    display: block;
+}
+
+.payment-option-ctn label {
+    margin-right: 20px;
+}
+
+.balance {
+    width: 120px;
+}
+
+@media (max-width: 1024px) {
+    .nav-left li {
+        margin: 0px 8px;
+    }
+    .search-input {
+        padding: 6px 80px 6px 10px
+    }
+    .search-ctn {
+        padding-left: 10px;
+    }
+    .cards-ctn {
+        width: 50%;
+    }
+    .quantity-text, .price-text, .edit-price, .edit-quantity, .bttn {
+        font-size: 15px;
+    }
+    .quantity-btn {
+        opacity: 0;
+    }
+    .bttn {
+        padding: 8px 10px;
+    }
+    .card-info {
+        grid-template-columns: 65% 30% 30% 100px;
+    }
+    .card-props {
+        max-width: 59%;
+        grid-template-columns: 60% 35% 35% 100px;
+    }
+    .card-props p strong, .cart-props p strong {
+        font-size: 15px;
+    }
+    .cart-props {
+        grid-template-columns: 35% 15% 20% 70px 90px;
+    }
+    .product-ctn {
+        grid-template-columns: 35% 15% 15% 70px 90px;
+    }
+    .client-ctn {
+        width: 46%;
+    }
+    .product-ctn p  {
+        font-size: 17px;
+    }
+    .product-ctn a {
+        margin-left: 10px;
+    }
+    .card-info h4 {
+        font-size: 16px;
+        margin-right: 5px;
+    }
+    .input-addquantity {
+        width: 50px;
+    }
+    .client-search {
+        width: 120px;
+    }
+}

@@ -1,9 +1,6 @@
 const mongoose = require('mongoose') 
 
-const dbUser = process.env.dbUser
-const dbPass = process.env.dbPass
-
-const url = `mongodb+srv://${dbUser}:${dbPass}@cluster1.3jht0ka.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1`
+const url = `mongodb://127.0.0.1:27017/productos`
 
 mongoose.connect(url, {
     useNewUrlParser: true,

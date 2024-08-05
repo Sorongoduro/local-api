@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/metadata') %>
+    <%- include('../partials/style-links') %>
+    <link rel="stylesheet" href="css/escaso.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <% productos.forEach(producto => { %>
+        <% if (producto.cantidad < producto.cantidad_minima) { %>
+            <div class="card rounded-0">
+                <!-- <div class="card-img">
+                    <img src='img/<%= producto.image %>'>
+                </div> -->
+                <div class="card-info">
+                    <h2 class="product-name"> <%= producto.nombre %></h2>
+                    <p> <strong>Precio:</strong> <%= producto.venta %> </p>
+                    <p> <strong>Cantidad:</strong> <%= producto.cantidad %> </p>
+                </div>
+            </div>
+        <% } %>
+    <% }) %>
+
+    <%- include('../partials/bootstrap-script') %>
+</body>
+</html>

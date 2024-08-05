@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/metadata') %>
+    <%- include('../partials/style-links') %>
+    <link rel="stylesheet" href="css/forms.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <div class="forms-ctn">
+        <form class="post-form">
+            <h1>Agregar Productos</h1>
+            <label>
+                SKU:
+                <input class="search-input" name="sku" type="number" placeholder="SKU">
+            </label>
+            <label>
+                Codigo de Barra:
+                <input class="search-input" name="codigo_barra" type="number" placeholder="Codigo de barra">
+            </label>
+            <label>
+                ID:
+                <input class="search-input" name="id" type="number" placeholder="ID del producto">
+            </label>
+            <label>
+                Producto:
+                <input class="search-input name-input" name="nombre" type="text" placeholder="Nombre del producto">
+            </label>
+            <label>
+                Unidad de medida (m/kg/g):
+                <input class="search-input" name="unidad_medida" type="text" placeholder="Metro/kilo/gramo">
+            </label>
+            <label>
+                Compra:
+                <input class="search-input" name="compra" type="number" placeholder="Precio de Compra">
+            </label>
+            <label>
+                Venta:
+                <input class="search-input" name="venta" type="number" placeholder="Precio de Venta">
+            </label>
+            <label>
+                Cantidad:
+                <input class="search-input" name="cantidad" type="number" placeholder="Cantidad del producto">
+            </label>
+            <label>
+                Cantidad minima:
+                <input class="search-input" name="cantidad_minima" type="text" placeholder="Cantidad Minima">
+            </label>
+            <label>
+                Categoria:
+                <input class="search-input type-input" name="categoria" type="text" placeholder="Categoria del producto">
+            </label>
+            <input class="admin-add" type="submit" value="Enviar">
+        </form>
+
+        <div class="xlsx-ctn">
+            <form class="model-xlsx">
+                <h1>Importar desde Excel</h1>
+                <h5>Seleccione la cantidad de columnas a importar</h5>
+                <label>
+                    SKU:
+                    <input class="search-input" name="sku" type="text" placeholder="SKU">
+                </label>
+                <label>
+                    Codigo de Barra:
+                    <input class="search-input" name="codigo_barra" type="text" placeholder="Codigo de barra">
+                </label>
+                <label>
+                    ID:
+                    <input class="search-input" name="id" type="text" placeholder="ID del producto">
+                </label>
+                <label>
+                    Producto:
+                    <input class="search-input name-input" name="nombre" type="text" placeholder="Nombre del producto">
+                </label>
+                <label>
+                    Unidad de medida (m/kg/g):
+                    <input class="search-input" name="unidad_medida" type="text" placeholder="Metro/kilo/gramo">
+                </label>
+                <label>
+                    Compra:
+                    <input class="search-input" name="compra" type="text" placeholder="Precio de Compra">
+                </label>
+                <label>
+                    Venta:
+                    <input class="search-input" name="venta" type="text" placeholder="Precio de Venta">
+                </label>
+                <label>
+                    Cantidad:
+                    <input class="search-input" name="cantidad" type="text" placeholder="Cantidad del producto">
+                </label>
+                <label>
+                    Cantidad minima:
+                    <input class="search-input" name="cantidad_minima" type="text" placeholder="Cantidad Minima">
+                </label>
+                <label>
+                    Categoria:
+                    <input class="search-input type-input" name="categoria" type="text" placeholder="Categoria del producto">
+                </label>
+                <input class="model-apply" type="submit" value="Aplicar">
+            </form>
+            
+            <form action="https://local-api-822e4889e0cf.herokuapp.com/importar" method="post" class="import-xlsx" enctype="multipart/form-data">
+                <label>
+                    <input name="file" type="file" value="Importar">
+                </label>
+                <input class="importar" type="submit" value="Importar">
+            </form>
+        </div>
+
+    </div>
+    <%- include('../partials/bootstrap-script') %>
+    <script src="js/addProduct.js"></script>
+    <script src="js/createModel.js"></script>
+
+</body>
+</html>
