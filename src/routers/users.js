@@ -40,7 +40,13 @@ router.post('/register', (req, res) => {
     res.redirect('/login')
 })
 
-
+router.delete('/user', (req, res) => {
+    User.deleteOne()
+    .then((user) => {
+        console.log(user)
+        res.send(`Producto eliminado: ${user}`)
+    })
+})
 
 // router.post('/auth', (req, res) => {
 //     const {username} = req.body
