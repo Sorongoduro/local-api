@@ -19,6 +19,7 @@ router.post('/register', (req, res) => {
     
     User.countDocuments({})
         .then(conteo => {
+            console.log("Conteo de usuarios: " + conteo)
             if (conteo === 0) {
                 user.role = 'admin'
             } else {
